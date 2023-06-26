@@ -2,3 +2,49 @@
     color: #000;
     text-decoration: none;
 }
+
+.wrap{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+    .wrap .header-wrap {
+        background: #dcc6f9;
+        height: 40px;
+        padding: 7px 15px;
+        display: flex;
+    }
+
+        .wrap .header-wrap .header-icon {
+            width: 50%;
+        }
+
+        .wrap .header-wrap .header-info {
+            width: 50%;
+            display: flex;
+            justify-content: right;
+        }
+
+    .wrap .contents-wrap {
+        width: 1200px;
+        height: calc(100vh - 170px);
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .wrap .contents-wrap .select-item {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #b2b2b2;
+            box-shadow: 3px 0 0 #6f6f6f;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+    
+    .wrap .footer-wrap {
+        background: #333;
+        height: 130px;
+    }
