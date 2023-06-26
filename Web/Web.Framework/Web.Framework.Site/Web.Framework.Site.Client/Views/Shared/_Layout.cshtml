@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e30ec71ecf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header-wrap">
+            <div class="header-title">
+                대관문의 박성제 대표 010-3209-3117 | <a href="mailto:blueartstudio@naver.com">blueartstudio@naver.com</a>
+            </div>
+            <div class="header-link">
+                <a href="https://www.facebook.com/blueartcompany" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="http://www.instagram.com/blueartcompany" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://blog.naver.com/blueartcompany" target="_blank"><i class="fa-solid fa-blog"></i></a>
+            </div>
+        </header>
+        <article class="web-article">
+            @RenderBody()
+        </article>
+        <footer class="web-footer">
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
