@@ -17,7 +17,7 @@ namespace Web.Framework.Site.Client.Areas.Game
             context.MapRoute(
                 "Game_default",
                 "Game/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

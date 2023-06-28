@@ -120,9 +120,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Game\Controllers\HomeController.cs" />
     <Compile Include="Areas\Game\GameAreaRegistration.cs" />
     <Compile Include="Areas\Homepage\Controllers\HomeController.cs" />
     <Compile Include="Areas\Homepage\HomepageAreaRegistration.cs" />
+    <Compile Include="Areas\Shop\Controllers\HomeController.cs" />
     <Compile Include="Areas\Shop\ShopAreaRegistration.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Global.asax.cs">
@@ -132,6 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img\logo.png" />
+    <Content Include="Content\shop.css" />
+    <Content Include="Content\game.css" />
+    <Content Include="Content\homepage.css" />
     <Content Include="Content\Img\blueartcompany-gray-logo.png" />
     <Content Include="Content\Img\blueartcompany-logo.png" />
     <Content Include="Content\reset.css" />
@@ -156,13 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Game\Controllers\" />
     <Folder Include="Areas\Game\Data\" />
-    <Folder Include="Areas\Game\Views\Shared\" />
     <Folder Include="Areas\Homepage\Data\" />
-    <Folder Include="Areas\Shop\Controllers\" />
     <Folder Include="Areas\Shop\Data\" />
-    <Folder Include="Areas\Shop\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +177,14 @@
     <Content Include="Areas\Shop\Views\web.config" />
     <Content Include="Areas\Homepage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Homepage\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Game\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Shop\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Game\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Shop\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Game\Views\Home\Game.cshtml" />
+    <Content Include="Content\Lottie\progressbar.json" />
     <None Include="packages.config" />
+    <Content Include="Views\Main\Detail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -17,7 +17,7 @@ namespace Web.Framework.Site.Client.Areas.Homepage
             context.MapRoute(
                 "Homepage_default",
                 "Homepage/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

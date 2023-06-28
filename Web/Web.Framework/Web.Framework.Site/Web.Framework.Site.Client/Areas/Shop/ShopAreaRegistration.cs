@@ -17,7 +17,7 @@ namespace Web.Framework.Site.Client.Areas.Shop
             context.MapRoute(
                 "Shop_default",
                 "Shop/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

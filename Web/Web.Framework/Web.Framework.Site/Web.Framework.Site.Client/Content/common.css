@@ -1,4 +1,38 @@
-﻿a {
+﻿@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+html, body {
+    font-family: "omyu_pretty";
+}
+
+a {
     color: #000;
     text-decoration: none;
 }
@@ -27,24 +61,83 @@
         }
 
     .wrap .contents-wrap {
-        width: 1200px;
+        width: 100%;
         height: calc(100vh - 170px);
-        margin: 0 auto;
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
-        .wrap .contents-wrap .select-item {
-            width: 100%;
-            height: 200px;
-            border: 1px solid #b2b2b2;
-            box-shadow: 3px 0 0 #6f6f6f;
-            border-radius: 30px;
-            margin-bottom: 30px;
+        .wrap .contents-wrap .select-wrap {
+            width: 1200px;
+            height: auto;
+            margin: 30px auto;
         }
+
+            .wrap .contents-wrap .select-wrap .select-item {
+                position: relative;
+                width: 100%;
+                height: 200px;
+                border: 1px solid #b2b2b2;
+                box-shadow: 0px 2px 5px #6f6f6f;
+                border-radius: 30px;
+                margin-bottom: 30px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+                .wrap .contents-wrap .select-wrap .select-item a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 77px;
+                    color: #2e2e2e;
+                }
+                    .wrap .contents-wrap .select-wrap .select-item a i {
+                        margin-top: 2px;
+                        position: relative;
+                    }
+
+                        .wrap .contents-wrap .select-wrap .select-item a i.fa-house {
+                            color: #222;
+                            top: 1px;
+                        }
+
+                        .wrap .contents-wrap .select-wrap .select-item a i.fa-cart-shopping {
+                            color: #ff006d;
+                            top: 2px;
+                        }
+
+                        .wrap .contents-wrap .select-wrap .select-item a i.fa-gamepad {
+                            color: #e400e6;
+                            top: 2px;
+                        }
     
     .wrap .footer-wrap {
         background: #333;
         height: 130px;
+    }
+
+.loading-wrap {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+}
+
+    .loading-wrap .loading-bg {
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        position: absolute;
+    }
+
+    .loading-wrap lottie-player {
+        margin: 0 auto;
+        top: 45%;
+        position: relative;
+        border: 0;
+        width: 300px;
+        height: auto;
     }

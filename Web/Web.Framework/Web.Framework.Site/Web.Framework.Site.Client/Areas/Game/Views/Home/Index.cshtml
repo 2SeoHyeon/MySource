@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Game/Views/Shared/_Layout.cshtml";
+}
+
+<div class="game-contents-wrap">
+    <div class="game-logo-wrap">
+        <img src="~/Content/Img/logo.png" />
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(GetLoading, 5500);
+    });
+
+    function GetLoading() {
+        $("#loading").show();
+        document.querySelector("#loading lottie-player").play();
+        setTimeout(GetGameMain, 4000);
+    }
+
+    function GetGameMain() {
+        $.ajax({
+            type: "GET",
+            url: "/Game/Home/Game",
+            dataType: "HTML",
+            async: false,
+            success: function (str) {
+                $("body").html(str);
+                $("#loading").hide();
+            },
+            error: function (response) {
+                alert(response.error);
+                $("#loading").hide();
+            }
+        });
+    }
+</script>
