@@ -10,11 +10,17 @@
 </div>
 
 <script>
+    history.pushState(null, null, location.href);
+
+    window.onpopstate = function () {
+        history.go(1);
+    }
+
     $(document).ready(function () {
-        setTimeout(GetLoading, 5500);
+        setTimeout(GetGameLoading, 5500);
     });
 
-    function GetLoading() {
+    function GetGameLoading() {
         $("#loading").show();
         document.querySelector("#loading lottie-player").play();
         setTimeout(GetGameMain, 4000);
@@ -27,7 +33,93 @@
             dataType: "HTML",
             async: false,
             success: function (str) {
-                $("body").html(str);
+                $(".game-contents-wrap").html(str);
+                $("#loading").hide();
+            },
+            error: function (response) {
+                alert(response.error);
+                $("#loading").hide();
+            }
+        });
+    }
+
+    function GetGameMainLoading() {
+        $(".game-wrap").addClass("contents-fadein");
+    }
+
+    $(".game-contents-wrap").on("click", ".game-main-wrap .game-btn-wrap .game-btn", function () {
+        const _this = $(this);
+
+        if (_this.hasClass("new")) {
+            GetStoryLoading();
+        }
+        else if (_this.hasClass("load")) {
+            GetGameLoad();
+        }
+        else if (_this.hasClass("illustration")) {
+            window.location.replace("/Illustration");
+
+        }
+        else if (_this.hasClass("credit")) {
+            window.location.replace("/Credit");
+
+        }
+        else if (_this.hasClass("exit")) {
+            window.location.replace("/");
+        }
+    });
+
+    function GetStoryLoading() {
+        $(".game-wrap").addClass("contents-fadeout");
+        setTimeout(GetStoryStart, 2950);
+    }
+
+    function GetStoryStart() {
+        $.ajax({
+            type: "GET",
+            url: "/Game/Story",
+            dataType: "HTML",
+            async: false,
+            success: function (str) {
+                $(".game-contents-wrap").html(str);
+                $("#loading").hide();
+            },
+            error: function (response) {
+                alert(response.error);
+                $("#loading").hide();
+            }
+        });
+    }
+
+    function GetStoryLoad() {
+
+    }
+
+    function GetIllustration() {
+        $.ajax({
+            type: "GET",
+            url: "/Game/Illustration",
+            dataType: "HTML",
+            async: false,
+            success: function (str) {
+                $(".game-contents-wrap").html(str);
+                $("#loading").hide();
+            },
+            error: function (response) {
+                alert(response.error);
+                $("#loading").hide();
+            }
+        });
+    }
+
+    function GetCredit() {
+        $.ajax({
+            type: "GET",
+            url: "/Game/Credit",
+            dataType: "HTML",
+            async: false,
+            success: function (str) {
+                $(".game-contents-wrap").html(str);
                 $("#loading").hide();
             },
             error: function (response) {

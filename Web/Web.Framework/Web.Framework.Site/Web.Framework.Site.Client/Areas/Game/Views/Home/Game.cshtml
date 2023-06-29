@@ -2,4 +2,34 @@
     Layout = null;
 }
 
-게임입니당
+<div class="game-wrap">
+    <div class="game-main-wrap">
+        <div class="title">
+            타이틀
+        </div>
+        <div class="game-btn-wrap">
+            <div class="game-btn new">
+                새로하기
+            </div>
+            <div class="game-btn load">
+                불러오기
+            </div>
+            <div class="game-btn illustration">
+                일러스트
+            </div>
+            <div class="game-btn credit">
+                만든이
+            </div>
+            <div class="game-btn exit">
+                종료
+            </div>
+        </div>
+    </div>
+    <div class="game-bg-wrap"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        GetGameMainLoading();
+    });
+</script>

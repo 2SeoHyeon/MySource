@@ -4,12 +4,27 @@
 
 <div class="select-wrap">
     <div class="select-item">
-        <a href="/Homepage"><i class="fa-solid fa-house"></i> 홈페이지</a>
+        <a link="/Homepage"><i class="fa-solid fa-house"></i> 홈페이지</a>
     </div>
     <div class="select-item">
-        <a href="/Shop"><i class="fa-solid fa-cart-shopping"></i> 쇼핑몰</a>
+        <a link="/Shop"><i class="fa-solid fa-cart-shopping"></i> 쇼핑몰</a>
     </div>
     <div class="select-item">
-        <a href="/Game"><i class="fa-solid fa-gamepad"></i> 게임</a>
+        <a link="/Game"><i class="fa-solid fa-gamepad"></i> 게임</a>
     </div>
 </div>
+
+<script>
+    history.pushState(null, null, location.href);
+
+    window.onpopstate = function () {
+        history.go(1);
+    }
+
+    $(".select-wrap").on("click", ".select-item a", function () {
+        const _this = $(this);
+        const _link = _this.attr("link");
+
+        window.location.replace(_link);
+    });
+</script>
