@@ -7,4 +7,29 @@
 
 html, body {
     font-family: 'SUIT-Regular';
+    scroll-behavior: smooth;
 }
+
+.sc {
+    width: 100%;
+    height: 100vh;
+}
+    .sc .contents {
+        position: sticky;
+        top: 0;
+    }
+
+    .sc.sc1 {
+        background-color: #feacac;
+        z-index: 99;
+    }
+
+    .sc.sc2 {
+        background-color: #ffbc8c;
+        z-index: 98;
+    }
+
+    .sc.sc3 {
+        background-color: #ffef98;
+        z-index: 97;
+    }

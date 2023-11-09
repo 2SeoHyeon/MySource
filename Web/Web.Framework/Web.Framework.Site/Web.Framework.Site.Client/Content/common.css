@@ -84,6 +84,7 @@ a {
                 margin-bottom: 30px;
                 font-size: 30px;
                 text-align: center;
+                overflow: auto;
             }
 
                 .wrap .contents-wrap .select-wrap .select-item a {
@@ -111,6 +112,16 @@ a {
                         .wrap .contents-wrap .select-wrap .select-item a i.fa-gamepad {
                             color: #e400e6;
                             top: 2px;
+                        }
+
+                        .wrap .contents-wrap .select-wrap .select-item a i.fa-globe {
+                            color: #2100ff;
+                            top: 2px;
+                        }
+
+                        .wrap .contents-wrap .select-wrap .select-item a i.fa-server {
+                            color: #000;
+                            top: 3px;
                         }
     
     .wrap .footer-wrap {

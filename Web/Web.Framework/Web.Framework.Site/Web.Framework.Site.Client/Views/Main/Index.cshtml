@@ -2,6 +2,8 @@
     ViewBag.Title = "Home Page";
 }
 
+<script src="~/Scripts/Test.js"></script>
+
 <div class="select-wrap">
     <div class="select-item">
         <a link="/Homepage"><i class="fa-solid fa-house"></i> 홈페이지</a>
@@ -12,6 +14,17 @@
     <div class="select-item">
         <a link="/Game"><i class="fa-solid fa-gamepad"></i> 게임</a>
     </div>
+    <div class="select-item">
+        <a link="/Groupware"><i class="fa-solid fa-globe"></i> 그룹웨어</a>
+    </div>
+    <div class="select-item">
+        <a link="/Server"><i class="fa-solid fa-server"></i> 서버정보</a>
+    </div>
+    @*<div class="select-item">
+        <div>
+        </div>
+        <button onclick="Solution()">테스트</button>
+    </div>*@
 </div>
 
 <script>
@@ -27,4 +40,43 @@
 
         window.location.replace(_link);
     });
+
+    function Solution() {
+        $("#loading").show();
+
+        $.ajax({
+            type: "POST",
+            url: "/Main/Solution",
+            dataType: "JSON",
+            async: false,
+            success: function (d) {
+                console.log(d);
+            },
+            error: function (response) {
+                alert(response.error);
+                $("#loading").hide();
+            }
+        });
+    }
+
+    function Testing() {
+        $("#loading").show();
+
+        $.ajax({
+            type: "POST",
+            url: "/Main/Testing",
+            dataType: "JSON",
+            async: false,
+            success: function (d) {
+                $("#Count").text(d.Count);
+                $("#OverCount").text(d.OverCount);
+                $("#Part").text(d.Part);
+                $("#MaxCount").text(d.MaxCount);
+            },
+            error: function (response) {
+                alert(response.error);
+                $("#loading").hide();
+            }
+        });
+    }
 </script>

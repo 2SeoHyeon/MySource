@@ -2,3 +2,80 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Homepage/Views/Shared/_Layout.cshtml";
 }
+
+<script src="~/Scripts/jquery.easeScroll.js"></script>
+
+<section class="sc sc1">
+    <div class="contents">
+        가나다
+    </div>
+</section>
+<section class="sc sc2">
+    <div class="contents">
+        라마바
+    </div>
+</section>
+<section class="sc sc3">
+    <div class="contents">
+        사아자
+    </div>
+</section>
+
+<script>
+    $("body").easeScroll();
+
+    $(window).scroll(function (event) {
+        const scroll = $(window).scrollTop();
+        const height = $("body").height();
+
+        if (0 <= scroll && scroll < height) {
+            const _this = $(".sc2");
+            const _offset = _this.offset();
+
+            $(window).animate({ scrollTop: _offset.top }, 1000);
+        }
+
+        //$(".sc").each(function () {
+        //    const _this = $(this);
+        //    const _offset = _this.offset();
+        //    const _prev = _this.prev(".sc");
+        //    const _poffset = _prev.offset();
+        //    const _next = _this.next(".sc");
+        //    const _noffset = _next.offset();
+
+        //    if (_next && _next.length > 0 && _offset.top <= scroll && scroll < _noffset.top) {
+        //        $(window).scrollTop(_noffset.top);
+        //    }
+
+        //    console.log(scroll, _offset);
+        //});
+
+    });
+
+    //$("html").on("mousewheel", function (event) {
+    //    const delta = event.originalEvent.wheelDelta;
+    //    const target = $(event.target);
+    //    const prev = target.prev(".sc");
+    //    const next = target.next(".sc");
+    //    const height = target.height();
+
+    //    if (delta > 0) {
+    //        if (prev && prev.length > 0) {
+    //            console.log("up");
+    //            prev.animate({
+    //                top: 0
+    //            });
+
+    //        }
+    //    }
+    //    else if (delta < 0) {
+    //        if (next && next.length > 0) {
+    //            console.log("down");
+    //            target.animate({
+    //                top: -height
+    //            });
+    //            console.log(1);
+    //        }
+    //    }
+    //});
+</script>
