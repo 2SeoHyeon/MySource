@@ -20,9 +20,6 @@
     <div class="select-item">
         <a link="/Server"><i class="fa-solid fa-server"></i> 서버정보</a>
     </div>
-    <div class="select-item">
-        <a link="#" onclick="htmlopen()"><i class="fa-solid fa-server"></i> 파일다운</a>
-    </div>
     @*<div class="select-item">
             <div>
             </div>
@@ -31,10 +28,6 @@
 </div>
 
 <script>
-    function htmlopen() {
-        window.open("/Content/윤리규범.html");
-    }
-
     history.pushState(null, null, location.href);
 
     window.onpopstate = function () {
