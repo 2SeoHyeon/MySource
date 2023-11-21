@@ -5,6 +5,187 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     font-family: 'GmarketSansMedium';
 }
+
+.wrap{
+    min-width: 768px
+}
+
+    .wrap .header-wrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background: rgba(255,255,255,0.5);
+        padding: 0 120px 0 300px;
+        text-align: center;
+    }
+
+        .wrap .header-wrap .header-list {
+            width: 100%;
+            padding: 50px 0;
+        }
+
+            .wrap .header-wrap .header-list .header-menu {
+                display: inline-block;
+                margin-right: 28px;
+            }
+
+                .wrap .header-wrap .header-list .header-menu a {
+                    
+                }
+
+    .wrap .leftmenu-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        background: #fff;
+        margin-top: 100px;
+        padding: 10px 40px;
+    }
+
+        .wrap .leftmenu-wrap .leftmenu-title {
+            width: 100%;
+        }
+
+            .wrap .leftmenu-wrap .leftmenu-title .leftmenu-logo {
+                display: inline-block;
+                height: 100%;
+                margin: 50px;
+            }
+
+                .wrap .leftmenu-wrap .leftmenu-title .leftmenu-logo img {
+
+                }
+
+        .wrap .leftmenu-wrap .leftmenu-list-wrap {
+            height: 100%;
+            overflow: auto;
+        }
+
+            .wrap .leftmenu-wrap .leftmenu-list-wrap::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list {
+                
+            }
+
+                .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu {
+                    position: relative;
+                }
+
+                    .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-menu-title {
+                        display: block;
+                        color: #6b6b6b;
+                        padding: 8px;
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+
+                    .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-menu-title.active {
+                        color: #1a80c3;
+                    }
+
+                        .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-menu-title .title {
+                        }
+
+                    .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-menu-icon-wrap {
+                        font-family: 'ChosunGu';
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                        font-size: 13px;
+                        cursor:pointer;
+                    }
+
+                    .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-menu-icon-wrap .icon {
+                        transform: rotate(-45deg);
+                    }
+
+                        .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .icon.on {
+                            transform: rotate(135deg);
+                        }
+
+                    .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-submenu-list {
+                        display: none;
+                    }
+
+                        .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-submenu-list .leftmenu-submenu-menu {
+
+                        }
+
+                            .wrap .leftmenu-wrap .leftmenu-list-wrap .leftmenu-list .leftmenu-menu .leftmenu-submenu-list .leftmenu-submenu-menu a {                                
+                                display: block;
+                                color: #6b6b6b;
+                                padding: 5px;
+                            }
+
+    .wrap .shop-article {
+
+    }
+
+    .wrap .shop-info-wrap {
+        margin: 100px 120px 0 300px;
+        display: flex;
+        width: 80%;
+        border-top: 1px solid;
+    }
+
+        .wrap .shop-info-wrap .shop-info-menu {
+            width: 100%;
+            margin: 30px 80px;
+        }
+
+            .wrap .shop-info-wrap .shop-info-menu .shop-info-menu-title {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .wrap .shop-info-wrap .shop-info-menu .shop-info-menu-content {
+                margin: 20px 0;
+            }
+
+                .wrap .shop-info-wrap .shop-info-menu .shop-info-menu-content .shop-info-menu-content-info {
+                    margin-top: 20px;
+                }
+
+                .wrap .shop-info-wrap .shop-info-menu .shop-info-menu-content .shop-info-menu-content-info div {
+
+                }
+
+    .wrap .shop-footer-wrap {
+        padding: 0 120px 0 300px;
+    }
+
+        .wrap .shop-footer-wrap .shop-footer-info {
+
+        }
+
+        .wrap .shop-footer-wrap .shop-footer-info span {
+
+        }
+
+            .wrap .shop-footer-wrap .shop-footer-info span a {
+
+            }
+
+            .wrap .shop-footer-wrap .shop-footer-info span img {
+
+            }
+
+        .wrap .shop-footer-wrap .shop-footer-info-sub {
+
+        }
