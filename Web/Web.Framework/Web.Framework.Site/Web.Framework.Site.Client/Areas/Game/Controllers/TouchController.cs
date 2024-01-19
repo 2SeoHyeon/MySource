@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
 using System.Web.Mvc;
 
-namespace Web.Framework.Site.Server.Controllers
+namespace Web.Framework.Site.Client.Areas.Game.Controllers
 {
-    public class HomeController : Controller
+    public class TouchController : Controller
     {
         public ActionResult Index()
         {

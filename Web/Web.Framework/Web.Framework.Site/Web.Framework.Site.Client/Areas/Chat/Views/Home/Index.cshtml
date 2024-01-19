@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Chat/Views/Shared/_Layout.cshtml";
+}
+
+<div class="chat-wrap">
+    <div class="chat">
+        <div class="chat-title-wrap">
+            <i class="fa-regular fa-comments"></i> 채팅하기
+        </div>
+        <div class="chat-content-wrap">
+            <div class="chat-content">
+                <div class="chat-message">
+                    <div class="message-from">
+                        안녕하세요
+                    </div>
+                </div>
+                <div class="chat-message">
+                    <div class="message-to">
+                        누구세요
+                    </div>
+                </div>
+            </div>
+            <div class="chat-text-wrap">
+                <textarea class="form-control" id="Message"></textarea>
+                <button type="button" class="btn btn-outline-primary" id="MessageSendBtn">전송</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        AddFromMessage(1);
+    });
+
+    const AddFromMessage = (depth) => {
+
+    }
+
+    $(".chat-wrap").on("keyup", "#Message", function (event) {
+        if (event.keyCode == 13) {
+            AddToMessage();
+        }
+    });
+
+    $(".chat-wrap").on("click", "#MessageSendBtn", function () {
+        AddToMessage();
+    });
+
+    const AddToMessage = () => {
+        const Message = $("#Message").val();
+
+        if (Message && Message != "") {
+            const Html = $("<div/>").append($("<div/>").html(Message).addClass("message-to")).addClass("chat-message")
+
+            $(".chat-content").append(Html);
+            $("#Message").val(null);
+        }
+    }
+</script>

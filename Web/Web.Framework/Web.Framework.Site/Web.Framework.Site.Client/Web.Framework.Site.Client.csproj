@@ -120,6 +120,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Chat\ChatAreaRegistration.cs" />
+    <Compile Include="Areas\Chat\Controllers\HomeController.cs" />
+    <Compile Include="Areas\ChatGPT\Controllers\HomeController.cs" />
+    <Compile Include="Areas\ChatGPT\ChatGPTAreaRegistration.cs" />
+    <Compile Include="Areas\Game\Controllers\TouchController.cs" />
     <Compile Include="Areas\Server\Controllers\HomeController.cs" />
     <Compile Include="Areas\Server\ServerAreaRegistration.cs" />
     <Compile Include="Areas\Groupware\Controllers\HomeController.cs" />
@@ -139,6 +144,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chat.css" />
+    <Content Include="Content\chatgpt.css" />
     <Content Include="Content\Img\Game\main_bg.jpg" />
     <Content Include="Content\Img\Game\chap1_bg.jpg" />
     <Content Include="Content\Img\Game\target0.png" />
@@ -181,6 +188,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\ChatGPT\Data\" />
+    <Folder Include="Areas\Chat\Data\" />
     <Folder Include="Areas\Game\Data\" />
     <Folder Include="Areas\Groupware\Data\" />
     <Folder Include="Areas\Homepage\Data\" />
@@ -211,8 +220,15 @@
     <Content Include="Areas\Server\Views\Home\Index.cshtml" />
     <Content Include="Areas\Server\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Server\Views\web.config" />
+    <Content Include="Areas\Game\Views\Home\Test.cshtml" />
+    <Content Include="Areas\Game\Views\Touch\Index.cshtml" />
+    <Content Include="Areas\ChatGPT\Views\Home\Index.cshtml" />
+    <Content Include="Areas\ChatGPT\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ChatGPT\Views\web.config" />
+    <Content Include="Areas\Chat\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Chat\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Chat\Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Main\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Public\Public.Repository\Public.Repository.csproj">

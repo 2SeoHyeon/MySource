@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <link href="~/Content/chat.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e30ec71ecf.js" crossorigin="anonymous"></script>
+    <script src="@ViewBag.Lottie"></script>
+</head>
+<body>
+    <div class="loading-wrap" id="loading">
+        <div class="loading-bg"></div>
+        <lottie-player src="~/Content/Lottie/progressbar.json" background="transparent" speed="1"></lottie-player>
+    </div>
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+</body>
+</html>
